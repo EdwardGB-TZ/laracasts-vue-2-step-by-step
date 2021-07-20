@@ -15,7 +15,7 @@
 <body>
 
     <div id="root">
-        <button :class="{ 'is-loading': isLoading }" @click="toggleClass">Toggle me</button>
+        <button :disabled="isDisabled" @click="toggleDisabled">Toggle me</button>
     </div>
     
 
@@ -26,11 +26,11 @@
         var app = new Vue({
             el: '#root',
             data: {
-                isLoading: false
+                isDisabled: false
             },
             methods: {
-                toggleClass() {
-                    this.isLoading = true;
+                toggleDisabled() {
+                    this.isDisabled = true;
                 }
             }
         })
