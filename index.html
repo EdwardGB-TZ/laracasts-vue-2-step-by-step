@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue 2 step by step</title>
 
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" 
+        integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+    />
 
-    <style>
-        .is-loading { color: red; }
-        .flex { display: flex; width: 200px; justify-content: space-between; }
-        .border { padding: 5px; border: 2px solid gray; border-radius: 5px; margin-bottom: 10px; }
-        .no-bullet { list-style: none; }
-    </style>
-
+    <style>body { padding-top: 40px; }</style>
 </head>
 <body>
 
-    <div id="root">
+    <div id="root" class="container">
+        <message title="Hello World" body="Lorem ipsum dolor sit amet."></message>
 
-        <task-list></task-list>
-
+        <message title="Hello Universe" body="bla test bla bla."></message>
     </div>
     
 
