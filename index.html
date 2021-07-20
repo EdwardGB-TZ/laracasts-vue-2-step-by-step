@@ -9,13 +9,7 @@
 <body>
 
     <div id="root">
-        <ul>
-            <li v-for="name in names" :key="name.id" v-text="name"></li>
-        </ul>
-
-        <input id="input" type="text" v-model="newName">
-
-        <button @click="addName ">Add name</button>
+        <button v-bind:title="title">Hover over me</button>
     </div>
     
 
@@ -26,18 +20,7 @@
         var app = new Vue({
             el: '#root',
             data: {
-                newName: '',
-                names: ['Joe', 'Mary', 'Jane', 'Jack']
-            },
-            methods: {
-                addName() {
-                    this.names.push(this.newName)
-
-                    this.newName = ''
-                }
-            },
-            mounted() {
-                
+                title: 'Now it is being set through JS'
             }
         })
 
