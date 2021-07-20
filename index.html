@@ -18,26 +18,12 @@
 <body>
 
     <div id="root">
-        <h2>All tasks</h2>
 
-        <ul class="no-bullet">
-            <div v-for="task in tasks" class="flex border">
-                <li v-text="task.description"></li>
-                <input type="checkbox" v-model:value="task.completed">
-            </div>
-        </ul>
+        <task>Go to the store</task>
+        <task>Go to the bank</task>
+        <task>Go to the work</task>
 
-        <h2>Completed tasks</h2>
 
-        <ul>
-            <li  class="flex border" v-for="task in completedTasks" v-text="task.description"></li>
-        </ul>
-
-        <h2>Incomplete tasks</h2>
-
-        <ul>
-            <li class="flex border" v-for="task in incompleteTasks" v-text="task.description"></li>
-        </ul>
     </div>
     
 
@@ -46,30 +32,7 @@
 
 
 
-    <script>
-        var app = new Vue({
-            el: '#root',
-            data: {
-                tasks: [
-                    { description: 'Go to the store', completed: true },
-                    { description: 'Finish screencast', completed: false },
-                    { description: 'Make donation', completed: false },
-                    { description: 'Clear inbox', completed: false },
-                    { description: 'Make dinner', completed: false },
-                    { description: 'Clean room', completed: true }
-                ]
-            },
-            computed: {
-                incompleteTasks() {
-                    return this.tasks.filter(task => ! task.completed)
-                },
-                completedTasks() {
-                    return this.tasks.filter(task => task.completed)
-                }
-            }
-        })
-
-    </script>
+    <script src="main.js"></script>
 
 </body>
 </html>
