@@ -5,11 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue 2 step by step</title>
+
+
+    <style>
+        .color-red { color: red; }
+        .color-blue { color: blue; }
+    </style>
+
 </head>
 <body>
 
     <div id="root">
-        <button v-bind:title="title">Hover over me</button>
+        <h1 :class="className">Hello world</h1>
     </div>
     
 
@@ -20,7 +27,7 @@
         var app = new Vue({
             el: '#root',
             data: {
-                title: 'Now it is being set through JS'
+                className: 'color-red'
             }
         })
 
