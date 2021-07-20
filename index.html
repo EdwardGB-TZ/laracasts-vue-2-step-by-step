@@ -16,7 +16,7 @@
 
     <div id="root">
         <ul>
-            <li v-for="task in tasks" v-text="task.description"></li>
+            <li v-for="task in tasks" v-if="task.completed" v-text="task.description"></li>
         </ul>
     </div>
     
