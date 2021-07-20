@@ -21,23 +21,9 @@
 
     <div id="root" class="container">
 
-        <tabs>
-            <tab name="About us" :selected="true">
-                <h1>Here is the content of the about us tab.</h1>
-            </tab>
+        <coupon @applied="onCouponApplied"></coupon>
 
-            <tab name="About our culture">
-                <h1>Here is the content of the about our culture tab.</h1>
-            </tab>
-
-            <tab name="About our vision">
-                <h1>Here is the content of the about our vision tab.</h1>
-            </tab>
-
-            <tab name="About other things">
-                <h1>Here is the content of the about our other things tab.</h1>
-            </tab>
-        </tabs>
+        <h1 v-if="couponApplied">You used a coupon</h1>
 
     </div>
 
