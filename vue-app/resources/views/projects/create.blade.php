@@ -19,37 +19,7 @@
 
 <body>
     <div id="app" class="container">
-        <example></example>
 
-        @include('projects.list')
-
-        <form action="/projects" method="POST" @submit.prevent="onSubmit"
-            @keydown="form.errors.clear($event.target.name)">
-            <div class="control mb-5">
-                <label for="name">Project name:</label>
-
-                <input id="name" name="name" class="input is-primary" type="text" placeholder="Primary input"
-                    v-model="form.name">
-
-                <span class="has-text-danger-dark" v-if="form.errors.has('name')" v-text="form.errors.get('name')">
-                </span>
-            </div>
-
-            <div class="control mb-5">
-                <label for="description">Project description:</label>
-
-                <input id="description" name="description" class="input is-primary" type="text"
-                    placeholder="Primary input" v-model="form.description">
-
-                <span class="has-text-danger-dark" v-if="form.errors.has('description')"
-                    v-text="form.errors.get('description')">
-                </span>
-            </div>
-
-            <div class="control">
-                <button type="submit" :disabled="form.errors.any()">Create</button>
-            </div>
-        </form>
     </div>
 
     <script src="/js/app.js"></script>
