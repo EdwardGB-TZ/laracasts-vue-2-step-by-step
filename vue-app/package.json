@@ -7,10 +7,7 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production",
-        "webpack": "export NODE_ENV=development && webpack --hide-modules",
-        "webpack-watch": "export NODE_ENV=development && webpack --hide-modules --watch",
-        "webpack-production": "export NODE_ENV=production && node_modules/.bin/webpack --hide-modules"
+        "production": "mix --production"
     },
     "devDependencies": {
         "axios": "^0.21.1",
