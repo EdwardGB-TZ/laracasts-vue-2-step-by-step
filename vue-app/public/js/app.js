@@ -80,11 +80,12 @@ class Form {
      * Fetch all relevant data for the form.
     */
     data() {
-        let data = Object.assign({}, this)
+        let data = {}
 
-        delete data.originalData
-        delete data.errors
-
+        for (let property in this.originalData) {
+            data[property] = this[property]
+        }
+ 
         return data
     }
 
