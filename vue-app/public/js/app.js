@@ -100,6 +100,14 @@ class Form {
         this.errors.clear()
     }
 
+    post(url) {
+        return this.submit('post', url)
+    }
+
+    delete(url) {
+        return this.submit('delete', url)
+    }
+
     /**
      * Submit the form.
      * 
@@ -119,8 +127,6 @@ class Form {
 
                     reject(error.response.data.errors)
                 })
-
-                // .catch(this.onFail.bind(this))
         })
 
     }
@@ -158,7 +164,7 @@ new Vue ({
 
     methods: {
         onSubmit() {
-            this.form.submit('post', '/projects')
+            this.form.post('/projects')
                 .then(data => console.log(data))
                 .catch(errors => console.log(errors))
         }
