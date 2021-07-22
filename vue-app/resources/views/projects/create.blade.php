@@ -16,12 +16,12 @@
 </head>
 
 <body>
-    <div id="one" class="container">
-        @{{ shared . user . name }}
-    </div>
+    <div id="app" class="container">
+        {{-- <input type="text" v-model="coupon"> --}}
+        {{-- Is equals to --}}
+        {{-- <input type="text" :value="coupon" @input="coupon = $event.target.value"> --}}
 
-    <div id="two">
-        @{{ shared . user . name }}
+        <coupon v-model="coupon"></coupon>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
