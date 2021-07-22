@@ -7,21 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projects</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-
     <style>
         body {
-            padding: 100px;
+            padding: 50px;
         }
 
     </style>
 </head>
 
 <body>
-    <div id="app" class="container">
-
+    <div id="one" class="container">
+        @{{ shared . user . name }}
     </div>
 
+    <div id="two">
+        @{{ shared . user . name }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="/js/app.js"></script>
 </body>
 
