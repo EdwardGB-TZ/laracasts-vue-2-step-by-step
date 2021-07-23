@@ -1932,25 +1932,20 @@ __webpack_require__.r(__webpack_exports__);
       statuses: []
     };
   },
+  filters: {
+    ago: function ago(date) {
+      return moment__WEBPACK_IMPORTED_MODULE_0___default()(date).fromNow();
+    },
+    capitalize: function capitalize(value) {
+      return value.toUpperCase();
+    }
+  },
   created: function created() {
     var _this = this;
 
     _models_Status__WEBPACK_IMPORTED_MODULE_1__.default.all(function (statuses) {
       return _this.statuses = statuses;
-    }); // Status.all()
-    //     .then(({data}) => this.statuses = data)
-    // // Before creating the ../models/Status class
-    // // ajax request
-    // axios.get('/statuses')
-    // // .then(response => this.statuses = response.data)
-    // // Alternative in ES2015 - using object desconstruction in the func params
-    // .then(({data}) => this.statuses = data)
-  },
-  methods: {
-    // Methods have more impact than computed properties in the cache
-    postedOn: function postedOn(status) {
-      return moment__WEBPACK_IMPORTED_MODULE_0___default()(status.created_at).fromNow();
-    }
+    });
   }
 });
 
@@ -24038,7 +24033,9 @@ var render = function() {
               _c("p", [
                 _vm._v(
                   "\n                        " +
-                    _vm._s(_vm.postedOn(status)) +
+                    _vm._s(
+                      _vm._f("capitalize")(_vm._f("ago")(status.created_at))
+                    ) +
                     "\n                    "
                 )
               ])

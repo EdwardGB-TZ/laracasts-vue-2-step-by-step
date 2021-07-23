@@ -9,7 +9,7 @@
                         </p>
 
                         <p>
-                            {{ postedOn(status) }}
+                            {{ status.created_at | ago | capitalize }}
                         </p>
                     </div>
 
@@ -31,25 +31,18 @@ export default {
         }
     },
 
-    created() {
-        Status.all(statuses => this.statuses = statuses)
+    filters: {
+        ago(date) {
+            return moment(date).fromNow()
+        },
 
-        // Status.all()
-        //     .then(({data}) => this.statuses = data)
-
-        // // Before creating the ../models/Status class
-        // // ajax request
-        // axios.get('/statuses')
-        // // .then(response => this.statuses = response.data)
-        // // Alternative in ES2015 - using object desconstruction in the func params
-        // .then(({data}) => this.statuses = data)
+        capitalize(value) {
+            return value.toUpperCase()
+        }
     },
 
-    methods: {
-        // Methods have more impact than computed properties in the cache
-        postedOn(status) {
-            return moment(status.created_at).fromNow()
-        }
+    created() {
+        Status.all(statuses => this.statuses = statuses)
     }
 }
 </script>
