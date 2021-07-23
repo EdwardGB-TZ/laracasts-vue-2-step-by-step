@@ -1,5 +1,11 @@
 export default {
-    template: '<div><h1>{{ message }}</h1></div>',
+    template: '<div><h1>{{ message | capitalize }}</h1></div>',
 
-    props: ['message']
+    props: ['message'],
+
+    filters: {
+        capitalize(message) {
+            return message.toUpperCase()
+        }
+    }
 }
