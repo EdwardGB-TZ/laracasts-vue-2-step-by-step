@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StatusesController;
 use App\Models\Status;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/statuses', function () {
-    return Status::with('user')->latest()->get();
-});
+Route::get('/statuses', [StatusesController::class, 'index']);
+Route::post('/statuses', [StatusesController::class, 'store']);

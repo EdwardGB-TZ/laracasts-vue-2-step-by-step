@@ -9,6 +9,8 @@ class Status extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function user()
     {
         // We can specify which columns of the relation we want to include
