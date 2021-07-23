@@ -1,17 +1,26 @@
 import VueRouter from 'vue-router'
 
+// An array that contains the routes and its associated components
 let routes = [
     {
         path: '/',
-        component: require('./views/Home.vue')
+        components: require('./views/Home.vue')
     },
     
     {
         path: '/about',
-        component: require('./views/About.vue')
+        components: require('./views/About.vue')
+    },
+
+        {
+        path: '/contact',
+        components: require('./views/Contact')
     }
 ]
 
 export default new VueRouter({
-    routes
+    routes,
+
+    // Set a custom css class for active links
+    linkActiveClass: 'is-active'
 })
