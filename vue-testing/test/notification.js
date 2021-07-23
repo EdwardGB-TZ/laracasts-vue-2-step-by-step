@@ -17,3 +17,7 @@ test.beforeEach(t => {
 test('that it renders a notification', t => {
     t.is(vm.$el.textContent, 'FOOBAR')
 })
+
+test('that it computes notification', t => {
+    t.is(vm.notification, 'FOOBAR')
+})
