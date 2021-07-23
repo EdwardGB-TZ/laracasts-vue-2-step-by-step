@@ -3,7 +3,12 @@ import test from 'ava'
 import Notification from '../src/Notification'
 
 test('that it renders a notification', t => {
-    let n = new Vue(Notification).$mount()
+    let N = Vue.extend(Notification)
 
-    t.is(n.$el.textContent, 'Foobar')
+    let vm = new N({
+        propsData: {
+            message: 'Foobar'
+    } }).$mount()
+
+    t.is(vm.$el.textContent, 'Foobar')
 })
