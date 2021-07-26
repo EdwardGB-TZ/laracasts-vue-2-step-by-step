@@ -13,6 +13,10 @@ Vue.directive('tooltip', {
     }
 })
 
+import Tooltip from './components/Tooltip.vue'
+
+Vue.component('tooltip', Tooltip)
+
 const app = new Vue({
     el: '#app',
 

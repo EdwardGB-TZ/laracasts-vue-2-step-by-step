@@ -42,9 +42,26 @@
         <h3>Option #2</h3>
         <p>
             Hello there,
-            <span v-tooltip:top="'Another way to make a tooltip'" data-tooltip-placement="left">Hover over me
-                again</span>
+            <span v-tooltip:top="'Another way to make a tooltip'" data-tooltip-placement="left">
+                Hover over me again
+            </span>
         </p>
+
+        <h3>Option #3</h3>
+        <p>
+            Hello there,
+            <span data-tooltip-name="our-products-tooltip">
+                Hover over me again
+            </span>
+        </p>
+
+        <tooltip name="our-products-tooltip" placement="left">
+            <h1>Our products</h1>
+
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, nostrum?
+            </p>
+        </tooltip>
     </div>
 
     <script src="/js/app.js"></script>
