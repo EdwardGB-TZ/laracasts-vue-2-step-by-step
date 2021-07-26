@@ -1857,8 +1857,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    wraparound: {
+      "default": true
+    },
+    autoplay: {
+      "default": false
+    }
+  },
   mounted: function mounted() {
-    console.log('component-mounted');
+    new (flickity__WEBPACK_IMPORTED_MODULE_0___default())(this.$el, {
+      wrapAround: this.wraparound,
+      autoPlay: this.autoplay,
+      cellAlign: 'left',
+      contain: true
+    });
   }
 });
 
@@ -23657,17 +23670,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      attrs: {
-        "data-flickity":
-          '{ "cellAlign": "left", "contain": true, "wrapAround" : true }'
-      }
-    },
-    [_vm._t("default")],
-    2
-  )
+  return _c("div", [_vm._t("default")], 2)
 }
 var staticRenderFns = []
 render._withStripped = true
