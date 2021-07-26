@@ -11,16 +11,19 @@
 </head>
 
 <body>
-    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround" : true }'>
-        <img src="https://picsum.photos/500">
-        <img src="https://picsum.photos/500?2">
-        <img src="https://picsum.photos/500?3">
-        <img src="https://picsum.photos/500?4">
-        <img src="https://picsum.photos/500?5">
+
+    <div id="app">
+        <carousel>
+            <img src="https://placeimg.com/640/480/any?">
+            <img src="https://placeimg.com/640/480/any?2">
+            <img src="https://placeimg.com/640/480/any?3">
+            <img src="https://placeimg.com/640/480/any?4">
+            <img src="https://placeimg.com/640/480/any?5">
+        </carousel>
     </div>
 
-
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    {{-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> --}}
+    <script src="/js/app.js"></script>
 
 </body>
 
