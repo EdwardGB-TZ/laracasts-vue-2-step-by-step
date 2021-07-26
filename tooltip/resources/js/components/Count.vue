@@ -32,4 +32,8 @@ export default {
         }
     }
 };
+
+// HTML call
+// <count :to="1000"></count>
 </script>
+
