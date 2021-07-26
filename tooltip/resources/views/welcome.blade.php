@@ -33,12 +33,16 @@
 
 <body>
     <div id="app">
+        <h3>Option #1</h3>
         <p>
-            Hello there, <span data-tooltip="I am a tooltip" data-tooltip-placement="left">Hover over me</span>
+            Hello there,
+            <span data-tooltip="I am a tooltip" data-tooltip-placement="left">Hover over me</span>
         </p>
 
+        <h3>Option #2</h3>
         <p>
-            Hello there again, <span data-tooltip="So we meet again" data-tooltip-placement="bottom">Hover over me
+            Hello there,
+            <span v-tooltip:top="'Another way to make a tooltip'" data-tooltip-placement="left">Hover over me
                 again</span>
         </p>
     </div>

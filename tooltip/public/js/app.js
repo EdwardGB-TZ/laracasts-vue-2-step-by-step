@@ -4881,10 +4881,22 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 // import Vue from 'vue';
 
-var app = new Vue({
+
+vue__WEBPACK_IMPORTED_MODULE_1__.default.directive('tooltip', {
+  // here elem will refer to the element where the directive has been bound to
+  bind: function bind(elem, bindings) {
+    tippy(elem, {
+      content: bindings.value,
+      theme: 'black',
+      placement: bindings.arg || 'top'
+    });
+  }
+});
+var app = new vue__WEBPACK_IMPORTED_MODULE_1__.default({
   el: '#app',
   mounted: function mounted() {
     document.querySelectorAll('[data-tooltip]').forEach(function (elem) {
