@@ -27,3 +27,24 @@ export default {
     }
 }
 </script>
+
+<script>
+export default {
+    data() {
+        return { name: 'Jon Doe' }
+    },
+
+    render(element) {
+        return element("div", { attrs: { id: "foobar" } }, [
+            element("h1", this.name)
+        ])
+    }
+}
+</script>
+
+
+<script>
+export default {
+    render: h => h("h1", "Hello world")
+}
+</script>

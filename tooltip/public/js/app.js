@@ -4884,32 +4884,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var tippy_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tippy.js */ "./node_modules/tippy.js/dist/tippy.esm.js");
 //
 //
 //
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: {
-    name: {},
-    placement: {
-      "default": top
-    }
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    document.querySelectorAll("[data-tooltip-name=".concat(this.name, "]")).forEach(function (elem) {
-      (0,tippy_js__WEBPACK_IMPORTED_MODULE_0__.default)(elem, {
-        content: _this.$el.innerHTML,
-        theme: 'black',
-        placement: _this.placement,
-        allowHTML: true
-      });
-    });
+  render: function render(h) {
+    return h("h1", "Hello world");
   }
 });
 
